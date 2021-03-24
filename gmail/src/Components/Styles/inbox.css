@@ -1,0 +1,99 @@
+.mail_body_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    border-bottom: 1px solid rgb(182, 181, 181);
+    padding: 10px;
+}
+.left_icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    color: rgb(110, 109, 109);
+}
+.left_icon svg{
+    margin-right: 10px;
+
+}
+.check_box{
+    display: flex;
+    align-items: center;
+}
+.check_box svg{
+    margin-right: 3px;
+}
+.right_icon{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.right_icon span{
+    margin-left: 10px;
+}
+.inbox{
+    display: flex;
+    flex:0.76 ;
+    flex-direction: column;
+}
+.mail_body_tabs{
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    align-items: center;
+    border-bottom: 1px solid rgb(182, 181, 181);
+
+}
+.tabs_inner{
+    padding: 15px 10px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+    transition: all 0.3S linear 0S;
+}
+.tabs_inner:hover{
+    background-color: #f1f3f4;
+    cursor: pointer;
+}
+.active_tab svg{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.active_tab{
+    border-bottom: 3px solid red;
+    color: red;
+}
+.emails{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 250px 550px auto;
+    padding: 8px 0px;
+    border-bottom: 1px solid gainsboro;
+    transition: all 0.2s linear 0s;
+}
+.emails:hover{
+    box-shadow: 2px 2px 4px #ccc;
+    cursor: pointer;
+}
+.emails:hover svg{
+    color: gray !important;
+}
+.emails_left{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+.emails_left svg{
+    color:lightgray ;
+    margin-right: 7px;
+    font-size: 20px;
+}
+.emails_right{
+    font-weight: bold;
+    font-size: 12px;
+}

@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Homescreen from './Components/Homescreen';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import SentScreen from './Components/SentScreen';
+import Login from './Components/Login'
+import { StateContext, useStateValue } from './Context/StateProvider';
 
 function App() {
+  const [{ user }] = useStateValue(StateContext);
+  console.log(user)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {!user ? <Login /> :
+          <Switch>
+            <Route exact path="/">
+              <Homescreen />
+            </Route>
+            <Route exact path="/sent">
+              <SentScreen />
+            </Route>
+          </Switch>
+        }
+      </div>
+    </Router>
   );
 }
 
